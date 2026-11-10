@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard | Stackly Tours</title><meta name="description" content="Stackly designs small-group tours with local guides.">
+<link rel="preconnect" href="https://images.unsplash.com"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet"></head>
+<body>
+<div class="dash">
+<div class="dash-backdrop d-lg-none" id="dashBackdrop"></div>
+<aside class="side" id="dashSidebar">
+<div class="side-top-mob d-flex justify-content-end align-items-center d-lg-none mb-3">
+  <button type="button" class="dash-close-btn" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+</div>
+<a class="side-brand d-none d-lg-flex" href="index.html"><img src="logo_matching_light.webp" alt="Stackly"></a>
+
+<div class="side-profile-mob d-lg-none mb-3">
+  <div class="d-flex align-items-center gap-3">
+    <div class="dash-avatar"><i class="bi bi-person-fill"></i></div>
+    <div>
+      <b class="uname text-capitalize d-block text-white" style="line-height:1.2">traveller</b>
+      <small class="uemail text-white-50 d-block" style="font-size:.78rem">traveller@stackly.com</small>
+      <span class="badge-s role-badge mt-1 d-inline-block">User</span>
+    </div>
+  </div>
+</div>
+
+<div data-role-view="user"><a class="on" href="#overview" data-user-tab="overview"><i class="bi bi-grid"></i>Overview</a><a href="#trips" data-user-tab="trips"><i class="bi bi-suitcase2"></i>My trips</a><a href="#wishlist" data-user-tab="wishlist"><i class="bi bi-heart"></i>Wishlist</a><a href="#payments" data-user-tab="payments"><i class="bi bi-credit-card"></i>Payments</a><a href="#support" data-user-tab="support"><i class="bi bi-chat-dots"></i>Support</a></div>
+<div data-role-view="admin" class="d-none"><a class="on" href="#overview" data-admin-tab="overview"><i class="bi bi-speedometer2"></i>Overview</a><a href="#bookings" data-admin-tab="bookings"><i class="bi bi-calendar-check"></i>All bookings</a><a href="#packages" data-admin-tab="packages"><i class="bi bi-compass"></i>Tour packages</a><a href="#travellers" data-admin-tab="travellers"><i class="bi bi-people"></i>Travellers</a><a href="#revenue" data-admin-tab="revenue"><i class="bi bi-bar-chart"></i>Revenue</a></div>
+
+<a href="login.html" id="logout-btn" class="mt-auto"><i class="bi bi-box-arrow-right"></i>Log out</a>
+</aside>
+<main class="dash-main"><header class="dash-topbar"><div class="dash-topbar-inner"><a href="index.html" class="dash-mob-brand d-lg-none"><img src="logo_matching_light.webp" alt="Stackly"></a><div class="dash-topbar-actions"><div class="dash-profile"><div class="dash-avatar"><i class="bi bi-person-fill"></i></div><div class="dash-profile-info"><span class="uemail">traveller@stackly.com</span><span class="badge-s role-badge">User</span></div></div><button class="dash-toggler d-lg-none" type="button" aria-label="Toggle navigation"><i class="bi bi-list"></i></button></div></div></header><h2 class="mb-1" style="font-size:2.4rem">Hello, <span class="uname text-capitalize">traveller</span></h2>
+<div data-role-view="user">
+<div data-user-pane="overview">
+<p class="muted mb-4">Bali departs in 41 days. Here is where everything stands.</p>
+<div class="row g-3 mb-4"><div class="col-6 col-xl-3"><div class="kpi"><i class="bi bi-suitcase2"></i><b data-count="3">0</b><span class="muted">Active trips</span></div></div><div class="col-6 col-xl-3"><div class="kpi"><i class="bi bi-wallet2"></i><b>$16,320</b><span class="muted">Total booked</span></div></div><div class="col-6 col-xl-3"><div class="kpi"><i class="bi bi-people"></i><b data-count="8">0</b><span class="muted">Travellers</span></div></div><div class="col-6 col-xl-3"><div class="kpi"><i class="bi bi-star"></i><b data-count="1240">0</b><span class="muted">Reward points</span></div></div></div>
+<div class="row g-3 mb-4"><div class="col-lg-8"><div class="panel"><h5 class="mb-4">Trip spending by month</h5><div class="bars"><div style="height:35%" title="35%"></div><div style="height:50%" title="50%"></div><div style="height:40%" title="40%"></div><div style="height:70%" title="70%"></div><div style="height:55%" title="55%"></div><div style="height:90%" title="90%"></div><div style="height:65%" title="65%"></div><div style="height:80%" title="80%"></div><div style="height:45%" title="45%"></div><div style="height:60%" title="60%"></div><div style="height:75%" title="75%"></div><div style="height:95%" title="95%"></div></div></div></div>
+<div class="col-lg-4"><div class="card-s h-100"><div class="ph"><img src="assets/img/1537996194471-e657df975ab4.webp" data-img="1537996194471-e657df975ab4" alt="Bali"></div><div class="body"><span class="tag">Next trip</span><h4 class="mt-2">Bali, Indonesia</h4><p class="muted mb-0">Dec 14 to Dec 21, 2026</p></div></div></div></div>
+<div class="panel"><h5 class="mb-3">My bookings</h5><div class="table-responsive"><table class="table align-middle mb-0"><thead><tr><th>Destination</th><th>Date</th><th>Guests</th><th>Total</th><th>Status</th></tr></thead><tbody>
+<tr><td class="fw-semibold">Bali, Indonesia</td><td>Dec 14, 2026</td><td>2</td><td>$2,580</td><td><span class="badge-s ok">Confirmed</span></td></tr><tr><td class="fw-semibold">Kyoto, Japan</td><td>Mar 03, 2027</td><td>2</td><td>$4,300</td><td><span class="badge-s wait">Deposit due</span></td></tr><tr><td class="fw-semibold">Swiss Alps</td><td>Jul 21, 2027</td><td>4</td><td>$9,440</td><td><span class="badge-s wait">Planning</span></td></tr></tbody></table></div></div>
+</div>
+
+<div data-user-pane="trips" class="d-none">
+<p class="muted mb-4">Your upcoming itineraries, local guide contacts and day-by-day trip packs.</p>
+<div class="row g-4 mb-4">
+<div class="col-lg-4"><div class="card-s"><div class="ph"><img src="assets/img/1537996194471-e657df975ab4.webp" alt="Bali, Indonesia"></div><div class="body"><div class="d-flex justify-content-between align-items-center"><span class="badge-s ok">Confirmed</span><small class="muted fw-semibold">7 Days · 2 Guests</small></div><h4 class="mt-3 mb-1">Bali, Indonesia</h4><p class="muted small mb-3"><i class="bi bi-calendar3 me-1"></i>Dec 14 – Dec 21, 2026 · Guide: Ayu Pratiwi</p><div class="d-flex justify-content-between align-items-center pt-2 border-top"><span class="price">$2,580</span><a href="404.html" class="btn btn-lagoon btn-sm">View itinerary</a></div></div></div></div>
+<div class="col-lg-4"><div class="card-s"><div class="ph"><img src="assets/img/1493976040374-85c8e12f0c0e.webp" alt="Kyoto, Japan"></div><div class="body"><div class="d-flex justify-content-between align-items-center"><span class="badge-s wait">Deposit due</span><small class="muted fw-semibold">9 Days · 2 Guests</small></div><h4 class="mt-3 mb-1">Kyoto, Japan</h4><p class="muted small mb-3"><i class="bi bi-calendar3 me-1"></i>Mar 03 – Mar 11, 2027 · Guide: Kenji Sato</p><div class="d-flex justify-content-between align-items-center pt-2 border-top"><span class="price">$4,300</span><a href="404.html" class="btn btn-sun btn-sm">Pay deposit</a></div></div></div></div>
+<div class="col-lg-4"><div class="card-s"><div class="ph"><img src="assets/img/1476514525535-07fb3b4ae5f1.webp" alt="Swiss Alps"></div><div class="body"><div class="d-flex justify-content-between align-items-center"><span class="badge-s wait">Planning</span><small class="muted fw-semibold">7 Days · 4 Guests</small></div><h4 class="mt-3 mb-1">Swiss Alps</h4><p class="muted small mb-3"><i class="bi bi-calendar3 me-1"></i>Jul 21 – Jul 27, 2027 · Guide: Lukas Meier</p><div class="d-flex justify-content-between align-items-center pt-2 border-top"><span class="price">$9,440</span><a href="404.html" class="btn btn-lagoon btn-sm">Edit route</a></div></div></div></div>
+</div>
+<div class="panel">
+<h5 class="mb-3">Pre-departure checklist · Bali (Dec 14)</h5>
+<div class="row g-3">
+<div class="col-md-4"><div class="p-3 rounded-4 bg-mist"><i class="bi bi-check-circle-fill text-success me-2"></i><b>Flights &amp; airport pickup</b><small class="d-block muted mt-1">Denpasar (DPS) private transfer confirmed</small></div></div>
+<div class="col-md-4"><div class="p-3 rounded-4 bg-mist"><i class="bi bi-check-circle-fill text-success me-2"></i><b>Handpicked boutique stays</b><small class="d-block muted mt-1">Ubud Jungle Villa &amp; Uluwatu Cliff Suite</small></div></div>
+<div class="col-md-4"><div class="p-3 rounded-4 bg-mist"><i class="bi bi-clock-history text-warning me-2"></i><b>Dietary &amp; packing notes</b><small class="d-block muted mt-1">Final group briefing opens Dec 01</small></div></div>
+</div>
+</div>
+</div>
+
+<div data-user-pane="wishlist" class="d-none">
+<p class="muted mb-4">Saved small-group departures you're watching · Lock in any trip with a refundable deposit.</p>
+<div class="row g-4">
+<div class="col-md-6 col-xl-4"><div class="card-s"><div class="ph"><img src="assets/img/1516426122078-c23e76319801.webp" alt="Serengeti"></div><div class="body"><span class="tag">4 of 10 seats left</span><h4 class="mt-2 mb-1">Serengeti, Tanzania</h4><p class="muted small mb-3">8 days · Great Migration camp &amp; private game drives with Amara.</p><div class="d-flex justify-content-between align-items-center"><span class="price">$3,120 <small class="muted fw-normal fs-6">/ guest</small></span><a href="404.html" class="btn btn-sun btn-sm">Reserve spot</a></div></div></div></div>
+<div class="col-md-6 col-xl-4"><div class="card-s"><div class="ph"><img src="assets/img/1506929562872-bb421503ef21.webp" alt="Maldives"></div><div class="body"><span class="tag">3 of 12 seats left</span><h4 class="mt-2 mb-1">Maldives Atolls</h4><p class="muted small mb-3">6 days · Boutique island stays, reef snorkelling &amp; dhoni cruises.</p><div class="d-flex justify-content-between align-items-center"><span class="price">$2,480 <small class="muted fw-normal fs-6">/ guest</small></span><a href="404.html" class="btn btn-sun btn-sm">Reserve spot</a></div></div></div></div>
+<div class="col-md-6 col-xl-4"><div class="card-s"><div class="ph"><img src="assets/img/1523906834658-6e24ef2386f9.webp" alt="Venice"></div><div class="body"><span class="tag">5 of 12 seats left</span><h4 class="mt-2 mb-1">Venice, Italy</h4><p class="muted small mb-3">5 days · Quiet lagoon islands, artisan workshops &amp; cicchetti walks.</p><div class="d-flex justify-content-between align-items-center"><span class="price">$1,740 <small class="muted fw-normal fs-6">/ guest</small></span><a href="404.html" class="btn btn-sun btn-sm">Reserve spot</a></div></div></div></div>
+</div>
+</div>
+
+<div data-user-pane="payments" class="d-none">
+<p class="muted mb-4">Track your trip invoices, deposit schedules and protected payment methods.</p>
+<div class="row g-3 mb-4">
+<div class="col-md-4"><div class="kpi"><i class="bi bi-check2-circle"></i><b>$9,870</b><span class="muted">Total paid to date</span></div></div>
+<div class="col-md-4"><div class="kpi"><i class="bi bi-hourglass-split"></i><b>$6,450</b><span class="muted">Upcoming balance</span></div></div>
+<div class="col-md-4"><div class="kpi"><i class="bi bi-shield-check"></i><b>100% Protected</b><span class="muted">Free changes up to 30 days prior</span></div></div>
+</div>
+<div class="panel">
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3"><h5 class="mb-0">Invoices &amp; payment schedule</h5><span class="tag"><i class="bi bi-credit-card me-1"></i>Visa ending in 4821</span></div>
+<div class="table-responsive"><table class="table align-middle mb-0"><thead><tr><th>Invoice</th><th>Trip</th><th>Description</th><th>Due date</th><th>Amount</th><th>Status</th></tr></thead><tbody>
+<tr><td class="fw-semibold">#INV-2041</td><td>Bali, Indonesia</td><td>Full trip settlement (2 guests)</td><td>Paid Oct 02, 2026</td><td class="fw-bold">$2,580</td><td><span class="badge-s ok">Paid</span></td></tr>
+<tr><td class="fw-semibold">#INV-2088</td><td>Kyoto, Japan</td><td>50% cohort deposit (2 guests)</td><td>Nov 25, 2026</td><td class="fw-bold">$2,150</td><td><span class="badge-s wait">Due soon</span></td></tr>
+<tr><td class="fw-semibold">#INV-2089</td><td>Kyoto, Japan</td><td>Final balance (30 days before trip)</td><td>Feb 01, 2027</td><td class="fw-bold">$2,150</td><td><span class="badge-s wait">Scheduled</span></td></tr>
+<tr><td class="fw-semibold">#INV-2104</td><td>Swiss Alps</td><td>Initial group reservation hold</td><td>Paid Oct 19, 2026</td><td class="fw-bold">$7,290</td><td><span class="badge-s ok">Paid</span></td></tr>
+</tbody></table></div></div>
+</div>
+
+<div data-user-pane="support" class="d-none">
+<p class="muted mb-4">Direct line to your dedicated Stackly trip planner · Replies within one working day.</p>
+<div class="row g-4">
+<div class="col-lg-5">
+<div class="panel h-100">
+<div class="d-flex align-items-center gap-3 mb-3">
+<img src="assets/img/1494790108377-be9c29b29330.webp" alt="Meera Iyer" width="60" height="60" class="rounded-circle object-fit-cover">
+<div><span class="tag">Your dedicated planner</span><h5 class="mt-1 mb-0">Meera Iyer</h5><small class="muted">Head of Experiences · Coimbatore Studio</small></div>
+</div>
+<p class="muted small">Need to adjust flight times, add a hotel night or update dietary preferences? Send a note directly to Meera.</p>
+<div class="p-3 rounded-4 bg-mist mb-2 small"><i class="bi bi-telephone-fill text-teal me-2"></i><b>24/7 Trip Emergency Line:</b> +91 422 400 8820</div>
+<div class="p-3 rounded-4 bg-mist small"><i class="bi bi-envelope-fill text-teal me-2"></i><b>Planner Email:</b> meera@stacklytours.com</div>
+</div>
+</div>
+<div class="col-lg-7">
+<div class="panel h-100">
+<h5 class="mb-3">Send a message to your planner</h5>
+<form onsubmit="event.preventDefault();location.href='404.html'">
+<div class="row g-3">
+<div class="col-md-6"><label class="form-label">Select trip</label><select class="form-select"><option>Bali, Indonesia (Dec 14, 2026)</option><option>Kyoto, Japan (Mar 03, 2027)</option><option>Swiss Alps (Jul 21, 2027)</option><option>New trip enquiry</option></select></div>
+<div class="col-md-6"><label class="form-label">Topic</label><select class="form-select"><option>Itinerary &amp; hotel question</option><option>Flight &amp; airport transfer</option><option>Dietary or room request</option><option>Date change / billing</option></select></div>
+<div class="col-12"><label class="form-label">Message</label><textarea class="form-control" rows="3" placeholder="Tell Meera how we can help..."></textarea></div>
+<div class="col-12"><a href="404.html" class="btn btn-lagoon">Send message</a></div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div data-role-view="admin" class="d-none">
+<div data-admin-pane="overview">
+<p class="muted mb-4">Operations command center · Real-time departures, guide dispatches and revenue control.</p>
+<div class="admin-banner mb-4">
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-3 pb-3 mb-3 border-bottom border-light border-opacity-10">
+<div><span class="admin-live"><span class="admin-pulse"></span> Live Operations · Q4 Season</span><h4 class="mb-0 mt-1 text-white">Global Tour Dispatch &amp; Revenue</h4></div>
+<div class="d-flex flex-wrap gap-2"><a href="404.html" class="btn btn-sun btn-sm px-3">+ New departure</a><a href="404.html" class="btn btn-ghost btn-sm px-3"><i class="bi bi-download me-1"></i>Export ledger</a></div>
+</div>
+<div class="admin-metrics">
+<div class="admin-metric"><small>Gross booking volume</small><div class="d-flex align-items-baseline gap-2"><b>$148,900</b><span class="admin-trend up"><i class="bi bi-arrow-up-right"></i> 18.4%</span></div></div>
+<div class="admin-metric"><small>Seat occupancy rate</small><div class="d-flex align-items-baseline gap-2"><b>91.6%</b><span class="admin-trend up">110 / 120 seats</span></div></div>
+<div class="admin-metric"><small>Verified local guides</small><div class="d-flex align-items-baseline gap-2"><b data-count="18">18</b><span class="admin-trend">Across 14 regions</span></div></div>
+<div class="admin-metric"><small>Pending sign-offs</small><div class="d-flex align-items-baseline gap-2"><b data-count="5">5</b><span class="admin-trend warn">Needs review</span></div></div>
+</div>
+</div>
+<div class="row g-4 mb-4">
+<div class="col-lg-5"><div class="admin-box h-100">
+<div class="d-flex justify-content-between align-items-center mb-3"><h5 class="mb-0">Departure seat capacity</h5><span class="admin-pill">5 active cohorts</span></div>
+<div class="admin-prog-list">
+<div class="admin-prog-item"><div class="d-flex justify-content-between small fw-semibold mb-1"><span>Kyoto · Autumn Temples</span><span class="text-teal">12 / 12 seats (100%)</span></div><div class="admin-track"><div class="admin-fill full" style="width:100%"></div></div></div>
+<div class="admin-prog-item"><div class="d-flex justify-content-between small fw-semibold mb-1"><span>Bali · Island &amp; Highlands</span><span>10 / 12 seats (83%)</span></div><div class="admin-track"><div class="admin-fill" style="width:83%"></div></div></div>
+<div class="admin-prog-item"><div class="d-flex justify-content-between small fw-semibold mb-1"><span>Maldives · Atoll Lagoon</span><span>9 / 12 seats (75%)</span></div><div class="admin-track"><div class="admin-fill" style="width:75%"></div></div></div>
+<div class="admin-prog-item"><div class="d-flex justify-content-between small fw-semibold mb-1"><span>Serengeti · Great Migration</span><span>8 / 10 seats (80%)</span></div><div class="admin-track"><div class="admin-fill" style="width:80%"></div></div></div>
+<div class="admin-prog-item"><div class="d-flex justify-content-between small fw-semibold mb-1"><span>Swiss Alps · Glacier Trail</span><span>7 / 12 seats (58%)</span></div><div class="admin-track"><div class="admin-fill warn" style="width:58%"></div></div></div>
+</div>
+</div></div>
+<div class="col-lg-4"><div class="admin-box h-100">
+<div class="d-flex justify-content-between align-items-center mb-3"><h5 class="mb-0">Guide &amp; route sign-offs</h5><span class="admin-pill warn">3 urgent</span></div>
+<div class="admin-feed">
+<div class="admin-feed-item"><img src="assets/img/1494790108377-be9c29b29330.webp" alt="Ayu"><div><b>Ayu Pratiwi · Bali</b><small class="d-block muted">Updated Ubud boutique stay contract</small></div><a href="404.html" class="admin-act text-decoration-none">Approve</a></div>
+<div class="admin-feed-item"><img src="assets/img/1507003211169-0a1dd7228f2d.webp" alt="Kenji"><div><b>Kenji Sato · Kyoto</b><small class="d-block muted">Requested 2 extra seats for Mar 03</small></div><a href="404.html" class="admin-act text-decoration-none">Approve</a></div>
+<div class="admin-feed-item"><img src="assets/img/1438761681033-6461ffad8d80.webp" alt="Amara"><div><b>Amara Ndiaye · Serengeti</b><small class="d-block muted">Submitted camp vehicle inspection</small></div><a href="404.html" class="admin-act text-decoration-none">Review</a></div>
+</div>
+</div></div>
+<div class="col-lg-3"><div class="admin-box admin-box-dark h-100 d-flex flex-column justify-content-between">
+<div><span class="admin-pill-sun">Treasury</span><h5 class="text-white mt-2 mb-3">Revenue split</h5>
+<div class="admin-split-row"><span>Scheduled groups</span><b>68%</b></div>
+<div class="admin-split-row"><span>Private custom</span><b>22%</b></div>
+<div class="admin-split-row"><span>Flight &amp; stay add-ons</span><b>10%</b></div>
+</div>
+<div class="admin-payout mt-3"><small class="d-block opacity-75">Next guide payout batch</small><b class="fs-5 text-warning">$18,450 · Nov 10</b></div>
+</div></div>
+</div>
+<div class="admin-box">
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+<div><h5 class="mb-0">Recent customer reservations</h5><small class="muted">Latest bookings across active cohorts</small></div>
+<a href="404.html" class="admin-pill on text-decoration-none">View all 42 bookings <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+<div class="table-responsive"><table class="table admin-table align-middle mb-0"><thead><tr><th>Booking ID</th><th>Lead traveller</th><th>Cohort &amp; guide</th><th>Departure</th><th>Revenue</th><th>Settlement</th></tr></thead><tbody>
+<tr><td class="fw-bold text-secondary">#STK-9041</td><td class="fw-semibold">Priya &amp; Arjun</td><td>Maldives · 6D Lagoon</td><td>Nov 18, 2026</td><td class="fw-bold">$4,960</td><td><span class="badge-s ok">Paid in full</span></td></tr>
+<tr><td class="fw-bold text-secondary">#STK-9042</td><td class="fw-semibold">Daniel Mathew</td><td>Bali · Ubud &amp; Coast</td><td>Dec 14, 2026</td><td class="fw-bold">$2,580</td><td><span class="badge-s ok">Paid in full</span></td></tr>
+<tr><td class="fw-bold text-secondary">#STK-9045</td><td class="fw-semibold">Elena Rostova</td><td>Kyoto · Quiet Mornings</td><td>Mar 03, 2027</td><td class="fw-bold">$4,300</td><td><span class="badge-s wait">Awaiting invoice</span></td></tr>
+<tr><td class="fw-bold text-secondary">#STK-9049</td><td class="fw-semibold">Marcus Vance</td><td>Serengeti · Migration</td><td>Jun 10, 2027</td><td class="fw-bold">$6,240</td><td><span class="badge-s ok">Paid in full</span></td></tr></tbody></table></div></div>
+</div>
+
+<div data-admin-pane="bookings" class="d-none">
+<p class="muted mb-4">All customer bookings · Filter, verify deposits, assign local guides and manage invoices.</p>
+<div class="row g-3 mb-4">
+<div class="col-6 col-lg-3"><div class="admin-box"><small class="muted text-uppercase fw-semibold">Total reservations</small><h3 class="mt-1 mb-0">42</h3><small class="text-teal">110 guests booked</small></div></div>
+<div class="col-6 col-lg-3"><div class="admin-box"><small class="muted text-uppercase fw-semibold">Confirmed &amp; paid</small><h3 class="mt-1 mb-0">37</h3><small class="text-teal">88% settlement rate</small></div></div>
+<div class="col-6 col-lg-3"><div class="admin-box"><small class="muted text-uppercase fw-semibold">Pending deposit</small><h3 class="mt-1 mb-0">3</h3><small class="text-warning fw-semibold">$11,480 due this week</small></div></div>
+<div class="col-6 col-lg-3"><div class="admin-box"><small class="muted text-uppercase fw-semibold">Date change requests</small><h3 class="mt-1 mb-0">2</h3><small class="muted">Within 30-day free window</small></div></div>
+</div>
+<div class="admin-box">
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+<div><h5 class="mb-0">Master booking ledger</h5><small class="muted">Complete list of Q4–Q2 small-group reservations</small></div>
+<div class="d-flex flex-wrap gap-2"><a href="404.html" class="admin-pill on text-decoration-none">All (42)</a><a href="404.html" class="admin-pill text-decoration-none">Paid in full (37)</a><a href="404.html" class="admin-pill warn text-decoration-none">Deposit due (3)</a><a href="404.html" class="admin-pill text-decoration-none">Changes (2)</a></div>
+</div>
+<div class="table-responsive"><table class="table admin-table align-middle mb-0"><thead><tr><th>Booking ID</th><th>Lead traveller</th><th>Guests</th><th>Tour package</th><th>Assigned guide</th><th>Departure</th><th>Total</th><th>Status</th><th>Action</th></tr></thead><tbody>
+<tr><td class="fw-bold text-secondary">#STK-9041</td><td class="fw-semibold">Priya &amp; Arjun</td><td>2 adults</td><td>Maldives · Atoll Lagoon</td><td>Hassan Rasheed</td><td>Nov 18, 2026</td><td class="fw-bold">$4,960</td><td><span class="badge-s ok">Paid in full</span></td><td><a href="404.html" class="admin-act text-decoration-none">Manage</a></td></tr>
+<tr><td class="fw-bold text-secondary">#STK-9042</td><td class="fw-semibold">Daniel Mathew</td><td>2 adults</td><td>Bali · Island &amp; Highlands</td><td>Ayu Pratiwi</td><td>Dec 14, 2026</td><td class="fw-bold">$2,580</td><td><span class="badge-s ok">Paid in full</span></td><td><a href="404.html" class="admin-act text-decoration-none">Manage</a></td></tr>
+<tr><td class="fw-bold text-secondary">#STK-9045</td><td class="fw-semibold">Elena Rostova</td><td>2 adults</td><td>Kyoto · Autumn Temples</td><td>Kenji Sato</td><td>Mar 03, 2027</td><td class="fw-bold">$4,300</td><td><span class="badge-s wait">Awaiting invoice</span></td><td><a href="404.html" class="admin-act text-decoration-none">Send link</a></td></tr>
+<tr><td class="fw-bold text-secondary">#STK-9049</td><td class="fw-semibold">Marcus Vance</td><td>2 adults</td><td>Serengeti · Great Migration</td><td>Amara Ndiaye</td><td>Jun 10, 2027</td><td class="fw-bold">$6,240</td><td><span class="badge-s ok">Paid in full</span></td><td><a href="404.html" class="admin-act text-decoration-none">Manage</a></td></tr>
+<tr><td class="fw-bold text-secondary">#STK-9051</td><td class="fw-semibold">Sophia Lindqvist</td><td>4 family</td><td>Swiss Alps · Glacier Trail</td><td>Lukas Meier</td><td>Jul 21, 2027</td><td class="fw-bold">$9,440</td><td><span class="badge-s wait">50% deposit</span></td><td><a href="404.html" class="admin-act text-decoration-none">Remind</a></td></tr>
+<tr><td class="fw-bold text-secondary">#STK-9053</td><td class="fw-semibold">Rohan Deshmukh</td><td>3 adults</td><td>Venice · After Dark Canals</td><td>Marco Bellini</td><td>Apr 12, 2027</td><td class="fw-bold">$5,220</td><td><span class="badge-s ok">Paid in full</span></td><td><a href="404.html" class="admin-act text-decoration-none">Manage</a></td></tr>
+<tr><td class="fw-bold text-secondary">#STK-9056</td><td class="fw-semibold">Claire &amp; Thomas</td><td>2 adults</td><td>Bali · Island &amp; Highlands</td><td>Ayu Pratiwi</td><td>Dec 14, 2026</td><td class="fw-bold">$2,580</td><td><span class="badge-s ok">Paid in full</span></td><td><a href="404.html" class="admin-act text-decoration-none">Manage</a></td></tr>
+</tbody></table></div></div>
+</div>
+
+<div data-admin-pane="packages" class="d-none">
+<p class="muted mb-4">Tour packages catalog · Manage pricing, group caps, itineraries and assigned local guides.</p>
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+<div class="d-flex flex-wrap gap-2"><a href="404.html" class="admin-pill on text-decoration-none">All packages (6)</a><a href="404.html" class="admin-pill text-decoration-none">Asia (3)</a><a href="404.html" class="admin-pill text-decoration-none">Europe (2)</a><a href="404.html" class="admin-pill text-decoration-none">Africa (1)</a></div>
+<a href="404.html" class="btn btn-sun btn-sm px-3">+ Create tour package</a>
+</div>
+<div class="row g-4">
+<div class="col-md-6 col-xl-4"><div class="admin-box h-100 p-0 overflow-hidden"><img src="assets/img/1537996194471-e657df975ab4.webp" alt="Bali" class="w-100" style="height:170px;object-fit:cover"><div class="p-3"><div class="d-flex justify-content-between align-items-start"><span class="admin-pill">7 Days · Max 12</span><b class="fs-5">$1,290</b></div><h5 class="mt-2 mb-1">Bali, Indonesia</h5><small class="muted d-block mb-3">Guide: Ayu Pratiwi · Next: Dec 14, 2026</small><div class="admin-track mb-2"><div class="admin-fill" style="width:83%"></div></div><div class="d-flex justify-content-between align-items-center small"><span class="fw-semibold">10 / 12 seats filled</span><a href="404.html" class="admin-act text-decoration-none">Edit tour</a></div></div></div></div>
+<div class="col-md-6 col-xl-4"><div class="admin-box h-100 p-0 overflow-hidden"><img src="assets/img/1493976040374-85c8e12f0c0e.webp" alt="Kyoto" class="w-100" style="height:170px;object-fit:cover"><div class="p-3"><div class="d-flex justify-content-between align-items-start"><span class="admin-pill">9 Days · Max 12</span><b class="fs-5">$2,150</b></div><h5 class="mt-2 mb-1">Kyoto, Japan</h5><small class="muted d-block mb-3">Guide: Kenji Sato · Next: Mar 03, 2027</small><div class="admin-track mb-2"><div class="admin-fill full" style="width:100%"></div></div><div class="d-flex justify-content-between align-items-center small"><span class="text-teal">12 / 12 Sold out</span><a href="404.html" class="admin-act text-decoration-none">Edit tour</a></div></div></div></div>
+<div class="col-md-6 col-xl-4"><div class="admin-box h-100 p-0 overflow-hidden"><img src="assets/img/1506929562872-bb421503ef21.webp" alt="Maldives" class="w-100" style="height:170px;object-fit:cover"><div class="p-3"><div class="d-flex justify-content-between align-items-start"><span class="admin-pill">6 Days · Max 12</span><b class="fs-5">$2,480</b></div><h5 class="mt-2 mb-1">Maldives Atolls</h5><small class="muted d-block mb-3">Guide: Hassan Rasheed · Next: Nov 18, 2026</small><div class="admin-track mb-2"><div class="admin-fill" style="width:75%"></div></div><div class="d-flex justify-content-between align-items-center small"><span class="fw-semibold">9 / 12 seats filled</span><a href="404.html" class="admin-act text-decoration-none">Edit tour</a></div></div></div></div>
+<div class="col-md-6 col-xl-4"><div class="admin-box h-100 p-0 overflow-hidden"><img src="assets/img/1516426122078-c23e76319801.webp" alt="Serengeti" class="w-100" style="height:170px;object-fit:cover"><div class="p-3"><div class="d-flex justify-content-between align-items-start"><span class="admin-pill">8 Days · Max 10</span><b class="fs-5">$3,120</b></div><h5 class="mt-2 mb-1">Serengeti, Tanzania</h5><small class="muted d-block mb-3">Guide: Amara Ndiaye · Next: Jun 10, 2027</small><div class="admin-track mb-2"><div class="admin-fill" style="width:80%"></div></div><div class="d-flex justify-content-between align-items-center small"><span class="fw-semibold">8 / 10 seats filled</span><a href="404.html" class="admin-act text-decoration-none">Edit tour</a></div></div></div></div>
+<div class="col-md-6 col-xl-4"><div class="admin-box h-100 p-0 overflow-hidden"><img src="assets/img/1523906834658-6e24ef2386f9.webp" alt="Venice" class="w-100" style="height:170px;object-fit:cover"><div class="p-3"><div class="d-flex justify-content-between align-items-start"><span class="admin-pill">5 Days · Max 12</span><b class="fs-5">$1,740</b></div><h5 class="mt-2 mb-1">Venice, Italy</h5><small class="muted d-block mb-3">Guide: Marco Bellini · Next: Apr 12, 2027</small><div class="admin-track mb-2"><div class="admin-fill" style="width:67%"></div></div><div class="d-flex justify-content-between align-items-center small"><span class="fw-semibold">8 / 12 seats filled</span><a href="404.html" class="admin-act text-decoration-none">Edit tour</a></div></div></div></div>
+<div class="col-md-6 col-xl-4"><div class="admin-box h-100 p-0 overflow-hidden"><img src="assets/img/1476514525535-07fb3b4ae5f1.webp" alt="Swiss Alps" class="w-100" style="height:170px;object-fit:cover"><div class="p-3"><div class="d-flex justify-content-between align-items-start"><span class="admin-pill">7 Days · Max 12</span><b class="fs-5">$2,360</b></div><h5 class="mt-2 mb-1">Swiss Alps</h5><small class="muted d-block mb-3">Guide: Lukas Meier · Next: Jul 21, 2027</small><div class="admin-track mb-2"><div class="admin-fill warn" style="width:58%"></div></div><div class="d-flex justify-content-between align-items-center small"><span class="fw-semibold">7 / 12 seats filled</span><a href="404.html" class="admin-act text-decoration-none">Edit tour</a></div></div></div></div>
+</div>
+</div>
+
+<div data-admin-pane="travellers" class="d-none">
+<p class="muted mb-4">Traveller CRM &amp; guest directory · View repeat explorers, dietary notes and emergency contacts.</p>
+<div class="row g-3 mb-4">
+<div class="col-md-4"><div class="admin-box d-flex align-items-center gap-3"><div class="dash-avatar"><i class="bi bi-people-fill"></i></div><div><small class="muted text-uppercase fw-semibold">Registered travellers</small><h4 class="mb-0">1,420</h4></div></div></div>
+<div class="col-md-4"><div class="admin-box d-flex align-items-center gap-3"><div class="dash-avatar"><i class="bi bi-award-fill"></i></div><div><small class="muted text-uppercase fw-semibold">Repeat booking rate</small><h4 class="mb-0">68.4%</h4></div></div></div>
+<div class="col-md-4"><div class="admin-box d-flex align-items-center gap-3"><div class="dash-avatar"><i class="bi bi-passport"></i></div><div><small class="muted text-uppercase fw-semibold">Passport verifications</small><h4 class="mb-0">106 / 110</h4></div></div></div>
+</div>
+<div class="admin-box">
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3"><h5 class="mb-0">Active guest directory</h5><span class="admin-pill">Showing top loyalty travellers</span></div>
+<div class="table-responsive"><table class="table admin-table align-middle mb-0"><thead><tr><th>Traveller</th><th>Email</th><th>Membership tier</th><th>Trips completed</th><th>Preferences &amp; notes</th><th>Lifetime spend</th></tr></thead><tbody>
+<tr><td><div class="d-flex align-items-center gap-2"><img src="assets/img/1494790108377-be9c29b29330.webp" alt="" width="36" height="36" class="rounded-circle object-fit-cover"><span class="fw-semibold">Priya Sharma</span></div></td><td>priya.sharma@email.com</td><td><span class="admin-pill on">VIP Explorer</span></td><td>5 trips</td><td>Vegetarian · Boutique ocean view</td><td class="fw-bold">$19,400</td></tr>
+<tr><td><div class="d-flex align-items-center gap-2"><img src="assets/img/1507003211169-0a1dd7228f2d.webp" alt="" width="36" height="36" class="rounded-circle object-fit-cover"><span class="fw-semibold">Daniel Mathew</span></div></td><td>daniel.m@email.com</td><td><span class="admin-pill on">VIP Explorer</span></td><td>4 trips</td><td>Early morning photography walks</td><td class="fw-bold">$16,320</td></tr>
+<tr><td><div class="d-flex align-items-center gap-2"><img src="assets/img/1438761681033-6461ffad8d80.webp" alt="" width="36" height="36" class="rounded-circle object-fit-cover"><span class="fw-semibold">Elena Rostova</span></div></td><td>elena.r@email.com</td><td><span class="admin-pill">Repeat Guest</span></td><td>2 trips</td><td>Gluten-free · Quiet ryokan room</td><td class="fw-bold">$8,150</td></tr>
+<tr><td><div class="d-flex align-items-center gap-2"><img src="assets/img/1500648767791-00dcc994a43e.webp" alt="" width="36" height="36" class="rounded-circle object-fit-cover"><span class="fw-semibold">Marcus Vance</span></div></td><td>mvance@email.com</td><td><span class="admin-pill">Repeat Guest</span></td><td>3 trips</td><td>Wildlife photography gear allowance</td><td class="fw-bold">$14,890</td></tr>
+</tbody></table></div></div>
+</div>
+
+<div data-admin-pane="revenue" class="d-none">
+<p class="muted mb-4">Treasury &amp; financial ledger · Track gross volume, net margins and scheduled local guide payouts.</p>
+<div class="admin-banner mb-4">
+<div class="admin-metrics">
+<div class="admin-metric"><small>Q4 gross volume</small><div class="d-flex align-items-baseline gap-2"><b>$148,900</b><span class="admin-trend up">+18.4% YoY</span></div></div>
+<div class="admin-metric"><small>Net platform revenue</small><div class="d-flex align-items-baseline gap-2"><b>$36,920</b><span class="admin-trend up">24.8% margin</span></div></div>
+<div class="admin-metric"><small>Hotel &amp; guide escrow</small><div class="d-flex align-items-baseline gap-2"><b>$93,530</b><span class="admin-trend">Protected funds</span></div></div>
+<div class="admin-metric"><small>Next payout batch</small><div class="d-flex align-items-baseline gap-2"><b>$18,450</b><span class="admin-trend warn">Nov 10, 2026</span></div></div>
+</div>
+</div>
+<div class="row g-4">
+<div class="col-lg-6"><div class="admin-box h-100">
+<h5 class="mb-3">Revenue by destination cohort</h5>
+<div class="admin-prog-list">
+<div class="admin-prog-item"><div class="d-flex justify-content-between small fw-semibold mb-1"><span>Kyoto, Japan (2 cohorts)</span><b>$38,700 (26%)</b></div><div class="admin-track"><div class="admin-fill full" style="width:86%"></div></div></div>
+<div class="admin-prog-item"><div class="d-flex justify-content-between small fw-semibold mb-1"><span>Serengeti, Tanzania</span><b>$37,440 (25%)</b></div><div class="admin-track"><div class="admin-fill" style="width:82%"></div></div></div>
+<div class="admin-prog-item"><div class="d-flex justify-content-between small fw-semibold mb-1"><span>Maldives Atolls</span><b>$34,720 (23%)</b></div><div class="admin-track"><div class="admin-fill" style="width:76%"></div></div></div>
+<div class="admin-prog-item"><div class="d-flex justify-content-between small fw-semibold mb-1"><span>Swiss Alps</span><b>$21,240 (14%)</b></div><div class="admin-track"><div class="admin-fill" style="width:54%"></div></div></div>
+<div class="admin-prog-item"><div class="d-flex justify-content-between small fw-semibold mb-1"><span>Bali, Indonesia</span><b>$16,800 (12%)</b></div><div class="admin-track"><div class="admin-fill warn" style="width:45%"></div></div></div>
+</div>
+</div></div>
+<div class="col-lg-6"><div class="admin-box h-100">
+<div class="d-flex justify-content-between align-items-center mb-3"><h5 class="mb-0">Guide &amp; partner payouts</h5><span class="admin-pill">Nov settlement</span></div>
+<div class="table-responsive"><table class="table admin-table align-middle mb-0"><thead><tr><th>Partner / Guide</th><th>Region</th><th>Amount</th><th>Status</th></tr></thead><tbody>
+<tr><td class="fw-semibold">Kenji Sato</td><td>Kyoto</td><td class="fw-bold">$8,450</td><td><span class="badge-s ok">Released</span></td></tr>
+<tr><td class="fw-semibold">Ayu Pratiwi</td><td>Bali</td><td class="fw-bold">$6,200</td><td><span class="badge-s wait">Nov 10</span></td></tr>
+<tr><td class="fw-semibold">Amara Ndiaye</td><td>Serengeti</td><td class="fw-bold">$9,100</td><td><span class="badge-s wait">Nov 10</span></td></tr>
+<tr><td class="fw-semibold">Banyan Lagoon Resort</td><td>Maldives</td><td class="fw-bold">$12,400</td><td><span class="badge-s ok">Released</span></td></tr>
+</tbody></table></div></div></div>
+</div>
+</div>
+</div>
+</main></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script></body></html>
